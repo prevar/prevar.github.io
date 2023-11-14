@@ -1,0 +1,91 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+            <h2>
+                Steps to create a website on github
+            </h2>
+            <p>
+                <ol>
+                    <li><a href="#gitbash">Setup GitBash on local computer and create website files.</a></li>
+                    <li><a href="#github">Create a Github account and setup a repository.</a></li>
+                    <li><a href="#move">Move the files from local Git to Github using drag and drop or GitBash</a></li>
+                    <li><a href="#preview">Access the website from the browser </a></li>
+                </ol>
+            </p>
+            <div id="gitbash">
+                <h3>Setup GitBash on local computer and create website files.</h3>
+                <p>Git is a version control system for tracking changes in the source code during software development. Bash also called Bourne Again Shell is an implementation of shell that allows you to perform many tasks efficiently like create,delete, update directory etc. 
+                    GitBash is an application installed locally to interact with git using the shell commands. Follow the steps below to setup GitBash</p>
+                <ol>
+                    <li>Go to the <a href='https://git-scm.com/download/win'>GitBash website </a> and download gitbash.</li>
+                    <li>Install gitbash choosing the default options. </li>
+                    <li>Once installed, you get a Git Bash and a Git GUI. </li>
+                    <li>Open the Git bash and enter command 'pwd' (print working directory). This shows your default home directory where you are. <br/>
+                        <img style="image-orientation:'left'" src="images/Picture4.png" width="25%" height="20%"/>
+                    </li>
+                    <li>To create a new repository space, create a new directory using the command <br/>
+                        mkdir name_of_your_repo <br/>
+                        <img src="images/Picture5.png" width="25%" height="20%"/></li>
+                    <li>Navigate to the newly created directory using <br/>
+                        cd name_of_your_repo </li>
+                    <li>Initialize an empty git repository using command 
+                        <br/> git init <br/>
+                    This will give message initialized empty git <br/>
+                    <img src="images/Picture6.png" width="25%" height="20%"/>
+                    </li>
+                    <li>Check the status of the repository by doing <br/> 
+                        git status</li>
+                    <li>In order to create a username and email for the user working on gitbash, use the following commands <br/>
+                        git config --global user.name "your username" <br/>
+                        git config --global user.email "your_email" <br/>
+                        <img src="images/Picture1.png" width="25%" height="20%"/>
+                    </li>
+                    <li>Create a new file index.html by using command <br/>
+                        touch filename
+                        and then check the status by using command <br/> git status <br/>
+                        Filename in red means file is staged but not yet added or committed to the repository.<br/>
+                        <img src="images/Picture2.png" width="25%" height="20%"/>
+                    </li>
+                    <li>Now add the file to the git repository by using command <br/>
+                        git add filename <br/>and check the status using <br/> git status <br/>Now you can see the file name has changed to green which means it is added but is yet to be committed.<br/>
+                        <img src="images/Picture3.png" width="25%" height="20%"/>
+                    </li>
+                    <li>Commit the changes to the file using command <br/>
+                        
+                        git commit -m "message to give details of the commit" <br/>
+                        (note that if you need to remove the file from staging you can use the command git rm --cached filename but we will not do that yet as we don’t want to remove the file) <br/>
+                        <img src="images/Picture7.png" width="25%" height="20%"/>
+                    </li>
+                    <li>You can check the status again using  <br/>
+                        git status</li>
+                    <li>The file has been added and committed and there is no other commit changes.</li>
+                </ol>
+            </div>
+            <div id="github">
+                <h3>Create a Github account and setup a repository.</h3>
+                <ol>
+                    <li>Go to github.com and login with your existing username/password. If you don't have a username, create one using the signup link and follow the steps.</li>
+                        <li>New Repository</li>
+                        <li>Go to your profile icon on the right-hand top corner and choose 'Your Repositories' and then click on the 'New' Button.</li>
+                        <li>Create a new repository. A special repository with the name your_username.github.io is automatically served as a webpage so you can choose to create a repository with that name or any other if that already exists.</li>
+                        <li>Once you specify the name of the repository, give it some description and mark as public if this repository to be accessible to everyone. Also, you can check the 'Add a README file' in case you want to add more details about this project. Once you click on the Create repository button, a new repository is created., it will show a different page with the contents of the repository which is empty right now.</li>
+                </ol>
+            </div>
+            <div id="move">
+                <h3>Move the files from local Git to Github using drag and drop or GitBash</h3>
+                <p>There are 2 options to add content to the repository</p>
+                    <ol>
+                        <li>Upload files - The files can be created locally on the filesystem and uploaded on the github website using the 'Upload files' option and dragging the files from the local filesystem onto the </li>
+                        <li> Or Creating files directly on the github website using the online HTML editor.</li>
+                    </ol>
+                <p>We will use the second option and  in the local VS code editor, open the index.html and then edit it to add html code. Make sure to add any media files to the folder. 
+                    Use the upload option to drag and drop the index.html that we created into github.</p>    
+            </div>
+            <div id="preview">
+                <h3>Access the website from the browser </h3>
+                <p>Open a browser and navigate to the website your_username.github.io. You should see the index.html that you created</p>
+            </div>
+        </div>
+    </body>
+</html>
